@@ -28,30 +28,26 @@ Developed a dynamic Power Query architecture that ingests expanding year-to-date
 ---
 
 ## 📂 Repository Architecture
-The project maintains a structured folder hierarchy that replicates a real-world enterprise financial data environment. The directory layout is preserved exactly as is to protect global file-path parameter links built into the Power Query engine.
+The project maintains a structured folder hierarchy that replicates a real-world enterprise financial data environment. The directory layout is preserved exactly as is to protect global file-path parameter links built into the Power Query engine. The repository is structured around a nested data subdirectory (`Variance Analysis`) to keep global file-path parameters localized and to separate root-level documentation from operational financial models.
+
 ```
-📁 Automated-FPnA-Reporting-Transformation/
+📁 Financial-Reporting-Process-Transformation/      # Root Repository Folder
 │
-├── 📁 2025/                         # Historical Financial Year Data
-│   ├── 📁 Monthly/                  # January to December Adjusted Month-End Actuals
-│   └── 📁 Weekly/                   # Chronological Week 01 to Week 53 Actuals
+├── 📄 README.md                                    # Project Portfolio Landing Page
+├── 📄 Brief Overview of the reporting process.docx # Lean Six Sigma Project SOP & Documentation
 │
-├── 📁 2026/                         # Current Financial Year Data (YTD)
-│   ├── 📁 Monthly/                  # Closed Books Actuals (Jan - June) + Open Month (July)
-│   └── 📁 Weekly/                   # Active Weeks (Current Month Work-in-Progress Data)
-│
-├── 📄 Company Data.xlsx             # Central Workbook hosting Master Datasets & Reference Tables
-│   ├── 📊 Sheet1 (Pivot Analysis)   # Legacy Pivot Reconciliations
-│   ├── 📊 General Ledger            # Chart of Accounts (GL Numbers, Sub-Categories, GAAP Groupings)
-│   ├── 📊 Department List           # Dept Codes mapped to L1/Director Level Managers & Emails
-│   ├── 📊 Employee Data             # Unique Employee IDs, Reporting Structures, and Active Status
-│   ├── 📊 Monthly Budget            # Static OPEX & SG&A Financial Year Budgets
-│   ├── 📊 Weekly Budget 2025        # 53-Week Target Distribution Matrix (Prior Year)
-│   └── 📊 Weekly Budget 2026        # 53-Week Target Distribution Matrix (Current Year)
-│
-├── 📊 Variance Analysis.pbix        # Unified Power BI Analytics Engine & Relational Star Schema Model
-│
-└── 📄 Brief Overview of the reporting process.docx   # Lean Six Sigma Project Documentation & SOP
+└── 📁 Variance Analysis/                            # Core Analytics & Pipeline Directory
+    ├── 📁 2025/                                    # Historical Financial Year Data
+    │   ├── 📁 Monthly/                             # Adjusted Month-End Actuals
+    │   └── 📁 Weekly/                              # Chronological Week 01 to Week 53 Actuals
+    │
+    ├── 📁 2026/                                    # Current Financial Year Data (YTD)
+    │   ├── 📁 Monthly/                             # Closed Books Actuals + Open Month
+    │   └── 📁 Weekly/                              # Active Weeks (Work-in-Progress Data)
+    │
+    ├── 📄 Company Data.xlsx                        # Master Datasets (GL, Depts, Employees, Budgets)
+    ├── 📄 Credit_Cards_Data Inputs.xlsx            # Primary Data Input Interface for T&E Transactions
+    └── 📊 Variance Analysis.pbix                   # Unified Power BI Analytics Engine & Star Schema
 ```
 ### 🔍 Architectural Highlights:
 * **M-Code Compatibility:** The folder naming convention directly mirrors the internal Power Query dynamic file-ingestion parameters, supporting multi-year automated evaluations.
