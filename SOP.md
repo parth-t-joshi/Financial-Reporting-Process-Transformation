@@ -56,25 +56,22 @@ To maintain strict Six Sigma quality control ($C_p \ge 1.33$), the process opera
 ## 6. Exception & Error Handling (Out-of-Control Action Plan)
 When data anomalies or refresh blocks occur, consult the following standardized diagnostic matrix:
 ```mermaid
-graph TD
-    A([Refresh Failure / Error Occurs]) --> B{Is it a Path Source Error?}
-    
-    B -- Yes --> C[Update FolderPath via 'Manage Parameters']
-    B -- No --> D{Is it an Expense Schema Error?}
-    
-    D -- Yes --> E[Check if a raw file column header was renamed]
-    D -- No --> F{Are there Data Type Mismatch Errors?}
-    
-    F -- Yes --> G[Check for alpha characters in Amount/GL fields]
-    
-    %% Styling for a sleek, corporate look
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style D fill:#bbf,stroke:#333,stroke-width:2px
-    style F fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#ff9,stroke:#333,stroke-width:1px
-    style E fill:#ff9,stroke:#333,stroke-width:1px
-    style G fill:#ff9,stroke:#333,stroke-width:1px
+flowchart TB
+    A(["Refresh Failure / Error Occurs"]) --> B{"Is it a Path Source Error?"}
+    B -- Yes --> C@{ label: "Update FolderPath via 'Manage Parameters'" }
+    B -- No --> D{"Is it an Expense Schema Error?"}
+    D -- Yes --> E["Check if a raw file column header was renamed"]
+    D -- No --> F{"Are there Data Type Mismatch Errors?"}
+    F -- Yes --> G["Check for alpha characters in Amount/GL fields"]
+
+    C@{ shape: rect}
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000000
+    style B fill:#bbf,stroke:#333,stroke-width:2px,color:#000000
+    style C fill:#ff9,stroke:#333,stroke-width:1px,color:#000000
+    style D fill:#bbf,stroke:#333,stroke-width:2px,color:#000000
+    style E fill:#ff9,stroke:#333,stroke-width:1px,color:#000000
+    style F fill:#bbf,stroke:#333,stroke-width:2px,color:#000000
+    style G fill:#ff9,stroke:#333,stroke-width:1px,color:#000000
 ```    
 - **Path Exceptions (`DataSource.Error`):** Occurs if folders are renamed or local system drive mounts change. Fix by repeating **Step 4.3.2** via the Parameter Wizard.
 - **Schema Exceptions (`Expression.Error - Column not found`):** Occurs if an upstream raw file export header was modified. Fix by navigating into the Power Query Advanced Editor and correcting the step schema mapping to match the new raw header.

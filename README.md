@@ -88,25 +88,22 @@ When structural changes occur in corporate hierarchies, they must be updated in 
 ### 3. Out-of-Control Action Plan (OCAP)
 If the Power BI dashboard fails to refresh or displays data disparities, the process operator must execute the following troubleshooting logic:
 ```mermaid
-graph TD
-    A([Refresh Failure / Error Occurs]) --> B{Is it a Path Source Error?}
-    
-    B -- Yes --> C[Update FolderPath via 'Manage Parameters']
-    B -- No --> D{Is it an Expense Schema Error?}
-    
-    D -- Yes --> E[Check if a raw file column header was renamed]
-    D -- No --> F{Are there Data Type Mismatch Errors?}
-    
-    F -- Yes --> G[Check for alpha characters in Amount/GL fields]
-    
-    %% Styling for a sleek, corporate look
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style D fill:#bbf,stroke:#333,stroke-width:2px
-    style F fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#ff9,stroke:#333,stroke-width:1px
-    style E fill:#ff9,stroke:#333,stroke-width:1px
-    style G fill:#ff9,stroke:#333,stroke-width:1px
+flowchart TB
+    A(["Refresh Failure / Error Occurs"]) --> B{"Is it a Path Source Error?"}
+    B -- Yes --> C@{ label: "Update FolderPath via 'Manage Parameters'" }
+    B -- No --> D{"Is it an Expense Schema Error?"}
+    D -- Yes --> E["Check if a raw file column header was renamed"]
+    D -- No --> F{"Are there Data Type Mismatch Errors?"}
+    F -- Yes --> G["Check for alpha characters in Amount/GL fields"]
+
+    C@{ shape: rect}
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000000
+    style B fill:#bbf,stroke:#333,stroke-width:2px,color:#000000
+    style C fill:#ff9,stroke:#333,stroke-width:1px,color:#000000
+    style D fill:#bbf,stroke:#333,stroke-width:2px,color:#000000
+    style E fill:#ff9,stroke:#333,stroke-width:1px,color:#000000
+    style F fill:#bbf,stroke:#333,stroke-width:2px,color:#000000
+    style G fill:#ff9,stroke:#333,stroke-width:1px,color:#000000
 ```
 1. **Path Failures:** Verify that the current user's local directory matches the global `FolderPath` parameter value inside Power Query. If the repository was moved or cloned to a new machine, re-link the root parameter using the **Manage Parameters** option.
 2. **Data Mismatches:** If row cells contain text in numeric columns (e.g., typos in currency figures), navigate to the Power Query editor, trace the error row using the `Keep Errors` diagnostic step, and fix the malformed field in the source Excel sheet.
