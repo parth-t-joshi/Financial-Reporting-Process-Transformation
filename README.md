@@ -23,27 +23,31 @@ Developed a dynamic Power Query architecture that ingests expanding year-to-date
 The project maintains a structured folder hierarchy that replicates a real-world enterprise financial data environment. The directory layout is preserved exactly as is to protect global file-path parameter links built into the Power Query engine.
 ```
 📁 Automated-FPnA-Reporting-Transformation/
+└── 📁 Variance Analysis/                # Core Analytics & Pipeline Directory
+│	├── 📁 2025/                         # Historical Financial Year Data
+│	│   ├── 📁 Monthly/                  # January to December Adjusted Month-End Actuals
+│	│   └── 📁 Weekly/                   # Chronological Week 01 to Week 53 Actuals
+│	├── 📁 2026/                         # Current Financial Year Data (YTD)
+│	│   ├── 📁 Monthly/                  # Closed Books Actuals (Jan - June) + Open Month (July)
+│	│   └── 📁 Weekly/                   # Active Weeks (Current Month Work-in-Progress Data)
+│	├── 📄 Company Data.xlsx             # Central Workbook hosting Master Datasets & Reference Tables
+│	│   ├── 📊 Sheet1 (Pivot Analysis)   # Legacy Pivot Reconciliations
+│	│   ├── 📊 General Ledger            # Chart of Accounts (GL Numbers, Sub-Categories, GAAP Groupings)
+│	│   ├── 📊 Department List           # Dept Codes mapped to L1/Director Level Managers & Emails
+│	│   ├── 📊 Employee Data             # Unique Employee IDs, Reporting Structures, and Active Status
+│	│   ├── 📊 Monthly Budget            # Static OPEX & SG&A Financial Year Budgets
+│	│   ├── 📊 Weekly Budget 2025        # 53-Week Target Distribution Matrix (Prior Year)
+│	│   └── 📊 Weekly Budget 2026        # 53-Week Target Distribution Matrix (Current Year)
+│	├── 📊 Variance Analysis.pbix        # Unified Power BI Analytics Engine & Relational Star Schema Model
 │
-├── 📁 2025/                         # Historical Financial Year Data
-│   ├── 📁 Monthly/                  # January to December Adjusted Month-End Actuals
-│   └── 📁 Weekly/                   # Chronological Week 01 to Week 53 Actuals
+├── 📄 README.md                                    # Project Portfolio Landing Page
+├── 📄 Project Charter.md                           # Business Case, Scope Boundaries & CTQs
+├── 📄 DMAIC Report.md                              # Full Process Documentation (Define-Control)
+├── 📄 SOP.md                                       # Standard Operating Procedure for Operators
 │
-├── 📁 2026/                         # Current Financial Year Data (YTD)
-│   ├── 📁 Monthly/                  # Closed Books Actuals (Jan - June) + Open Month (July)
-│   └── 📁 Weekly/                   # Active Weeks (Current Month Work-in-Progress Data)
-│
-├── 📄 Company Data.xlsx             # Central Workbook hosting Master Datasets & Reference Tables
-│   ├── 📊 Sheet1 (Pivot Analysis)   # Legacy Pivot Reconciliations
-│   ├── 📊 General Ledger            # Chart of Accounts (GL Numbers, Sub-Categories, GAAP Groupings)
-│   ├── 📊 Department List           # Dept Codes mapped to L1/Director Level Managers & Emails
-│   ├── 📊 Employee Data             # Unique Employee IDs, Reporting Structures, and Active Status
-│   ├── 📊 Monthly Budget            # Static OPEX & SG&A Financial Year Budgets
-│   ├── 📊 Weekly Budget 2025        # 53-Week Target Distribution Matrix (Prior Year)
-│   └── 📊 Weekly Budget 2026        # 53-Week Target Distribution Matrix (Current Year)
-│
-├── 📊 Variance Analysis.pbix        # Unified Power BI Analytics Engine & Relational Star Schema Model
-│
-└── 📄 Brief Overview of the reporting process.docx   # Lean Six Sigma Project Documentation & SOP
+├── 📕 Brief Overview of the reporting process.pdf  # Project SOP Documentation Export
+├── 📕 DMAIC Root Cause Identification (Fishbone Diagram).pdf
+└── 📕 Process Optimization Bottlenecks (Pareto Chart).pdf
 ```
 ### 🔍 Architectural Highlights:
 * **M-Code Compatibility:** The folder naming convention directly mirrors the internal Power Query dynamic file-ingestion parameters, supporting multi-year automated evaluations.
