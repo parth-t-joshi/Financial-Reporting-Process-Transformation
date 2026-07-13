@@ -37,6 +37,7 @@ The process currently ingests data spread continuously across various separate f
     - `Monthly Budget` & `Weekly Budget (2025/2026)` target distribution sheets.
 ### 2.3 Time-Study Baselining
 Time tracking on the baseline process showed that manual column mapping, data scrubbing to resolve termination-date blanks, and VLOOKUP alignments required **an average of 42 hours per month**, rendering the process completely un-scalable.
+	*Historically, the manual reporting process resulted in a massive cumulative bottleneck, consuming **48 hours** for weekly compilations and **36 hours** for monthly closes. To monitor this variation on a daily operational level, we tracked the **Daily Ingestion & Sync Time**. At its peak crisis window in late June, the daily friction spiked to **2.70 hours of active error-correction on a single day's data load**.
 ## 3. ANALYZE PHASE
 ### 3.1 Root Cause Analysis (Lean Waste Identification)
 Applying Lean methodologies helped isolate three major process wastes (_Muda_):
@@ -83,13 +84,14 @@ in
 ```
 This ensures that external users, auditors, or executives can update the root path globally via a single parameter input box in Power BI without needing to modify individual queries.
 ### 5.2 Process Capability Gains & Results
+**Following the July 1st Power BI Go-Live, the daily active latency was crushed to 0.03 hours ($\approx 1.8$ minutes). Consequently, the total cumulative batch cycle time dropped from 48 hours down to an on-demand, single-click refresh, permanently eliminating the end-of-period bottleneck.**
 The implementation of the new data solution delivered major quantifiable improvements across key performance indicators:
 
-|**Performance Metric**|**Legacy Baseline Process**|**Automated State (Power BI)**|**Percentage Improvement**|
-|---|---|---|---|
-|**Data Processing Cycle Time**|36 – 48 Hours|< 2 Minutes|**> 99.9% Reduction**|
-|**Human Ingestion Defects**|Frequent (Lookup breaks)|0 (Automated System)|**100% Elimination**|
-|**Data Update Latency**|7 – 14 Days|On-Demand Refresh|**Real-Time Capability**|
+| **Performance Metric**         | **Legacy Baseline Process** | **Automated State (Power BI)** | **Percentage Improvement** |
+| ------------------------------ | --------------------------- | ------------------------------ | -------------------------- |
+| **Data Processing Cycle Time** | 36 – 48 Hours               | < 2 Minutes                    | **> 99.9% Reduction**      |
+| **Human Ingestion Defects**    | Frequent (Lookup breaks)    | 0 (Automated System)           | **100% Elimination**       |
+| **Data Update Latency**        | 7 – 14 Days                 | On-Demand Refresh              | **Real-Time Capability**   |
 ### 5.3 Sustainability Plan & Standard Operating Procedures (SOP)
 To maintain the process improvements long-term:
 1. **Source File Rule:** All new credit card transaction outputs must be dropped directly into their respective structured directories (`Year\Monthly\` or `Year\Weekly\`) using consistent names without changing column configurations.

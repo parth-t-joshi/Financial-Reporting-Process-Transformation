@@ -1,4 +1,4 @@
-Here is a complete, enterprise-grade **Executive Project Charter** tailored specifically to your Lean Six Sigma + FP&A automation project. It formally frames your manual data consolidation challenges as process "defects" and highlights your Power Query/Power BI implementation as the optimal "Improve" phase breakthrough.
+Here is a complete, enterprise-grade **Executive Project Charter** tailored specifically to Lean Six Sigma + FP&A automation project. It formally frames manual data consolidation challenges as process "defects" and highlights Power Query/Power BI implementation as the optimal "Improve" phase breakthrough.
 # 📋 Executive Project Charter
 **Project Name:** Automated SG&A Expenses (T&E) Reporting Process Transformation
 **Methodology:** Lean Six Sigma (DMAIC Framework)
