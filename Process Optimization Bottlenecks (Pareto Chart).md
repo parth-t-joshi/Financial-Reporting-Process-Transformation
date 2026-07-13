@@ -11,7 +11,7 @@ This matrix straight into your **Measure/Analyze Phase** documentation to prove 
 |**4**|**Manual Pivot Aggregation & Formatting** (Rebuilding charts, color-coding variances for L1 managers)|3 Hours|7.1%|95.2%|Useful Many (Replaced by Power BI Interactive Canvas)|
 |**5**|**File Collection from Split Folders** (Opening separate 2025/2026 subfolders to copy datasets)|2 Hours|4.8%|100.0%|Useful Many (Replaced by Folder Ingestion Parameter)|
 
-![Pareto Chart](Images/Process%20Pareto%20Chart.png]]
+![Pareto Chart](Images/Process%20Pareto%20Chart.png)
 
 Instead of looking at the _financial data categories_ or the _root cause themes_, this version maps the exact **procedural steps and technical friction points** where your team wastes time during a time-and-motion study.
 
