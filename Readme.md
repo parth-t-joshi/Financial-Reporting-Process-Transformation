@@ -45,9 +45,10 @@ The project maintains a structured folder hierarchy that replicates a real-world
 ├── 📄 DMAIC Report.md                              # Full Process Documentation (Define-Control)
 ├── 📄 SOP.md                                       # Standard Operating Procedure for Operators
 │
-├── 📕 Brief Overview of the reporting process.pdf  # Project SOP Documentation Export
-├── 📕 DMAIC Root Cause Identification (Fishbone Diagram).pdf
-└── 📕 Process Optimization Bottlenecks (Pareto Chart).pdf
+├── 📕 Brief Overview of the reporting process.md  # Project SOP Documentation Export
+├── 📕 DMAIC Root Cause Identification (Fishbone Diagram).md
+├── 📕 Process Optimization Bottlenecks (Pareto Chart).md
+└── 📕 Statistical Process Control (SPC).md
 ```
 ### 🔍 Architectural Highlights:
 * **M-Code Compatibility:** The folder naming convention directly mirrors the internal Power Query dynamic file-ingestion parameters, supporting multi-year automated evaluations.
