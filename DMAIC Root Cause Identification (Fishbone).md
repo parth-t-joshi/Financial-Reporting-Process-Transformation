@@ -11,7 +11,6 @@
 | **Measurement** | • Time studies confirmed manual cleansing requires ~42 hours per month.                                                                                                                                                                                                                                                | • Non-Utilized Talent                         | Baselines how critical automation was for ROI.                        |
 | **Environment** | • Information silos between Accounting (Actuals), HR (Employees), and Budget Owners (Targets).                                                                                                                                                                                                                         | • Inventory (Lagging Information)             | Creates reconciliation friction during month-end close.               |
 # Fishbone Diagram: Root case of 36 & 48 hours reporting latency
-
 Using the Lean Six Sigma DMAIC framework finding from the current FP&A project
 ![Fishbone Diagram](Images/Fishbone%20Diagram.png)
 
