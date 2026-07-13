@@ -13,4 +13,5 @@
 # Fishbone Diagram: Root case of 36 & 48 hours reporting latency
 
 Using the Lean Six Sigma DMAIC framework finding from the current FP&A project
-![[Fishbone Diagram.png]]
+
+![Fishbone Diagram](Images/Fishbone Diagram.png)
