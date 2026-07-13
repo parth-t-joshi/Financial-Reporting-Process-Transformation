@@ -10,7 +10,7 @@ As the volume of weekly transactions and monthly book-closes scales throughout t
 ## 2. Problem & Goal Statements
 ### 🚨 Problem Statement
 The current manual T&E expense data consolidation process requires cross-referencing six independent data sources (Employee Master, Chart of Accounts, Department Catalogs, P&L Group hierarchies, and various Target Budgets).
-- **Defects (Cycle Time):** Gathering, transforming, and pushing these data fragments into legacy spreadsheet reports generates a cycle time of **36 to 48 operational hours** per reporting cycle.
+- **Defects (Cycle Time):** Gathering, transforming, and pushing these data fragments into legacy spreadsheet reports generates a cycle time of **36 to 48 operational hours** per reporting cycle. **Historically, to monitor this variation on a daily operational level, the team tracked Daily Ingestion & Sync Time; at its peak crisis window in late June, this daily friction spiked to 2.70 hours of active error-correction on a single day's data load.**
 - **Defects (Quality):** Manual copy-pasting creates frequent human errors, broken lookups, and reconciliation mismatches, causing data latency that renders weekly insights outdated by the time they reach department directors.
 ### 🎯 Goal Statement
 To reduce the end-to-end reporting cycle time from **48 hours to near-instantaneous (under 2 minutes)** via an automated Power Query ETL pipeline and an interactive Power BI dashboard by the end of the implementation cycle. The goal is to eliminate 100% of manual data manipulation defects, establish data-refresh capabilities, and achieve a stable process capability index ($C_p$) for data integrity.
@@ -45,6 +45,8 @@ To track process capability, the project measures success against three vital me
 - **Analyze:** Isolate structural breakages caused by manual reconciliations and find the root causes behind data pipeline latencies (Completed).
 - **Improve:** Engineer a parameterized ETL framework inside the Power Query engine and design a relational Star-Schema dashboard in Power BI (Completed).
 - **Control:** Deploy a unified global path parameter framework to decouple model execution from local workstation paths; draft standard operating documentation to guarantee sustainability (In-Progress).
+### 📈 Post-Implementation Performance Update (As of July 2026)
+Following the July 1st Power BI Go-Live, the daily active latency was successfully crushed to 0.03 hours ($\approx 1.8$ minutes). Consequently, the total cumulative batch cycle time dropped from 48 hours down to an on-demand, single-click refresh, permanently eliminating the end-of-period bottleneck. The project is now concluding its final Control Phase documentation.
 ## 7. Project Team Roles & Responsibilities
 - **Six Sigma Green Belt / Data Architect:** _[PARTH JOSHI]_ — Responsible for process scoping, data modeling, Power Query pipeline engineering, and dashboard development.
 - **Project Sponsor:** Finance Director / FP&A Lead — Responsible for approving business requirements, validating variance calculations, and auditing model outputs against corporate financial parameters.
