@@ -1,5 +1,5 @@
 The control chart reflects the **July 1st Go-Live**. It shows the manual bottleneck processing times spiking in late June, followed by complete stabilization immediately after implementation.
-![[Statistical Process Control (SPC) Chart.png]]
+![SPC Diagram](/Images/Statistical%20Process%20Control%20(SPC)%20Chart.png)
 ## 🔢 Six Sigma Capability & Quality Metric Transformation
 Here is the updated calculation based on shifting the Go-Live boundary to July 1st, 2026. This pools the late June manual crisis window into the Pre-Implementation metrics:
 
