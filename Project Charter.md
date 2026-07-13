@@ -1,9 +1,9 @@
 Here is a complete, enterprise-grade **Executive Project Charter** tailored specifically to Lean Six Sigma + FP&A automation project. It formally frames manual data consolidation challenges as process "defects" and highlights Power Query/Power BI implementation as the optimal "Improve" phase breakthrough.
 # 📋 Executive Project Charter
-**Project Name:** Automated SG&A Expenses (T&E) Reporting Process Transformation
-**Methodology:** Lean Six Sigma (DMAIC Framework)
-**Project Sponsor:** Director Level Management / CFO
-**Process Owner:** FP&A Team
+**Project Name:** Automated SG&A Expenses (T&E) Reporting Process Transformation;
+**Methodology:** Lean Six Sigma (DMAIC Framework);
+**Project Sponsor:** Director Level Management / CFO;
+**Process Owner:** FP&A Team;
 ## 1. Business Case & Project Background
 In corporate Financial Planning & Analysis (FP&A), managing and reporting Selling, General, and Administrative (SG&A) expenses—specifically Travel & Entertainment (T&E)—is critical for cost control and variance management. Historically, the compilation of these reports relied entirely on manual extraction, alignment, and formatting across multiple disparate datasets.
 As the volume of weekly transactions and monthly book-closes scales throughout the fiscal year, this manual mechanism presents a severe operational bottleneck. It delays decision-making, introduces data-integrity risks, and prevents the finance team from performing higher-value predictive analytics. Transitioning to an automated, parameterized ETL pipeline is essential to guarantee corporate agility and reporting scalability.
