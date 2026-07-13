@@ -1,6 +1,6 @@
 The control chart reflects the **July 1st Go-Live**. It shows the manual bottleneck processing times spiking in late June, followed by complete stabilization immediately after implementation.
 
-![Clip Image](clip image002.png)
+![Clip Image](clip_image002.png)
 
 
 ## 🔢 Six Sigma Capability & Quality Metric Transformation
