@@ -3,7 +3,8 @@
 An enterprise-grade optimization project integrating **Lean Six Sigma methodologies** with **FP&A workflows** to automate the Travel & Expense (T&E) reporting pipeline. By architecting an automated ETL pipeline using **Power Query** and **Power BI**, this project completely eliminated manual data manipulation.
 * **Weekly Reporting Cycle Time:** Reduced from **48 Hours** to **Fully Automated (<5 mins refresh)**
 * **Monthly Reporting Cycle Time:** Reduced from **36 Hours** to **Fully Automated (<5 mins refresh)**
-* **Defect Rate:** Dropped to **0%** by eliminating manual copy-paste errors, broken `VLOOKUP`/`XLOOKUP` formulas, and split-week structural anomalies.
+* **Process Sigma Score:** Shifted from **$-0.6659\sigma$** to **$\ge +6.00\sigma$**
+*  **Defect Rate & DPMO:** Reduced from **$747,252.75\text{ DPMO}$ (74.73% Defects)** down to **$0\text{ DPMO}$ (0.00% Defects)** by eliminating copy-paste errors, lookup breaks, and split-week structural anomalies
 ---
 ## 📈 Core Skills Demonstrated
 * **Process Improvement:** Lean Six Sigma DMAIC Framework, Root Cause Analysis, SIPOC Mapping, Control Plans.
@@ -61,7 +62,7 @@ This model uses **Power Query Parameters** to manage file paths globally. If you
 2. Open `Variance Analysis.pbix` in **Power BI Desktop**.
 3. On the **Home** tab of the ribbon, click the dropdown arrow under **Transform Data** and select **Edit Parameters**.
    *(Alternatively, click **Transform Data** to open the Power Query Editor, and click **Manage Parameters** in the Home ribbon).*
-4. Update the value of the path parameter (e.g., `File_Source_Directory`) to match the local folder path where you saved this repository on your computer.
+4. Update the value of the path parameter (e.g., `FolderPath`) to match the local folder path where you saved this repository on your computer.
 5. Click **OK**, then click **Apply Changes** on the yellow warning bar. The entire ETL pipeline will automatically refresh against your local data copies without breaking any steps!
 ---
 ## 🛡️ Lean Six Sigma Control Plan & Governance Framework
@@ -70,7 +71,7 @@ This model uses **Power Query Parameters** to manage file paths globally. If you
 **System Environment:** Power Query (M) & Power BI Desktop  
 **Control Plan Implementation Date:** July 2026  
 ### 1. Core Control Matrix
-This matrix establishes the operational guards required to sustain the automated refresh cycle time (< 10 minutes) and eliminate transaction ingestion errors.
+This matrix establishes the operational guards required to sustain the automated refresh cycle time (< 2 minutes) and eliminate transaction ingestion errors.
 
 | Process Step             | Control Parameter                    | Target / Specification                                                                                          | Measurement Method                                           | Sample Size / Frequency | Responsible Party                | Corrective Action Trigger                                                             |
 | :----------------------- | :----------------------------------- | :-------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :---------------------- | :------------------------------- | :------------------------------------------------------------------------------------ |
