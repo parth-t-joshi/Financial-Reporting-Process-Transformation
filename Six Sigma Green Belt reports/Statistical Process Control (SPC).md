@@ -2,7 +2,7 @@
 
 The control chart reflects the impact of the **July 1st Go-Live**. It illustrates manual processing times spiking during the late June close window, followed by complete process stabilization immediately upon Power BI deployment.
 
-![SPC Diagram](Images/Statistical%20Process%20Control%20(SPC)%20Chart.png)
+![SPC Diagram](/Images/Statistical%20Process%20Control%20(SPC)%20Chart.png)
 
 ---
 

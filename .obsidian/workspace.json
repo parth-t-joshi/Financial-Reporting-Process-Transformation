@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Six Sigma Green Belt reports/Process Optimization Bottlenecks (Pareto Chart).md",
+                "file": "Six Sigma Green Belt reports/Statistical Process Control (SPC).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Process Optimization Bottlenecks (Pareto Chart)"
+              "title": "Statistical Process Control (SPC)"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Six Sigma Green Belt reports/Process Optimization Bottlenecks (Pareto Chart).md",
+                "file": "Six Sigma Green Belt reports/Statistical Process Control (SPC).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Process Optimization Bottlenecks (Pareto Chart)"
+              "title": "Backlinks for Statistical Process Control (SPC)"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Six Sigma Green Belt reports/Process Optimization Bottlenecks (Pareto Chart).md",
+                "file": "Six Sigma Green Belt reports/Statistical Process Control (SPC).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Process Optimization Bottlenecks (Pareto Chart)"
+              "title": "Outgoing links from Statistical Process Control (SPC)"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Six Sigma Green Belt reports/Process Optimization Bottlenecks (Pareto Chart).md",
+                "file": "Six Sigma Green Belt reports/Statistical Process Control (SPC).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Process Optimization Bottlenecks (Pareto Chart)"
+              "title": "Outline of Statistical Process Control (SPC)"
             }
           }
         ],
@@ -186,16 +186,16 @@
   },
   "active": "d59a999a9bacd131",
   "lastOpenFiles": [
-    "Readme.md",
-    "Six Sigma Green Belt reports/Statistical Process Control (SPC).md",
     "Six Sigma Green Belt reports/Statistical Baselining & Continual Improvement Framework.md",
     "Six Sigma Green Belt reports/SOP.md",
     "Six Sigma Green Belt reports/Project Charter.md",
-    "Six Sigma Green Belt reports/Historical Data Analysis.xlsx",
     "Six Sigma Green Belt reports/Process Optimization Bottlenecks (Pareto Chart).md",
     "Six Sigma Green Belt reports/DMAIC Root Cause Identification (Fishbone).md",
     "Six Sigma Green Belt reports/DMAIC Report.md",
     "Six Sigma Green Belt reports/Brief Overview of the reporting process.md",
+    "Readme.md",
+    "Six Sigma Green Belt reports/Statistical Process Control (SPC).md",
+    "Six Sigma Green Belt reports/Historical Data Analysis.xlsx",
     "Six Sigma Green Belt reports",
     "Statistical Baselining & Continual Improvement Framework.md",
     "Six Sigma reports/Statistical Baselining & Continual Improvement Framework.md",
