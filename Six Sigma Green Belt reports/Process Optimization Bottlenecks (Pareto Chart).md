@@ -15,7 +15,7 @@ Integrate this matrix directly into your **Measure/Analyze Phase** documentation
 |   **5**   | **File Collection from Split Folders** (Opening separate 2025/2026 subfolders to copy datasets)[cite: 10]       |        2 Hours        |     4.8%     |    100.0%    | **Useful Many** (Replaced by Folder Ingestion Parameter)[cite: 10]  |
 | **Total** | **Cumulative Monthly Processing Friction**[cite: 10]                                                            |     **42 Hours**      |  **100.0%**  |  **100.0%**  | **Targeted for 100% Pipeline Automation**                           |
 
-![Pareto Chart](Images/Process%20Pareto%20Chart.png)
+![Pareto Chart](/Images/Process%20Pareto%20Chart.png)
 
 ---
 
