@@ -10,13 +10,13 @@ The control chart reflects the impact of the **July 1st Go-Live**. It illustrate
 
 Here is the capability evaluation based on shifting the Go-Live boundary to July 1st, 2026, pooling the late June manual crisis window into the Pre-Implementation baseline:
 
-| Statistical Performance Metric                  | Pre-Implementation State (Up to June 30) |   Post-Implementation State (From July 1 Onward)    |          Operational Status / Shift           |
-| :---------------------------------------------- | :--------------------------------------: | :-------------------------------------------------: | :-------------------------------------------: |
-| **Average Daily Cycle Time ($\mu$)**            |         **$1.319\text{ Hours}$**         | **$0.030\text{ Hours } (\approx 1.8\text{ mins})$** |         📉 **$97.7\%$ Latency Drop**          |
-| **Process Standard Deviation ($\sigma$)**       |           $0.448\text{ Hours}$           |                $0.004\text{ Hours}$                 |        🎯 **Total Process Stability**         |
-| **Defects Captured (Over $1.5\text{ hr}$ USL)** |        $10\text{ Process Breaks}$        |              $0\text{ Process Breaks}$              |         🚀 **Zero Pipeline Failures**         |
-| **Defects Per Million Opportunities (DPMO)**    |              **$128,205$**               |                       **$0$**                       | 💎 **Eliminated $128\text{k}$ Yield Defects** |
-| **Process Sigma Quality Level Score**           |            **$2.63\ \sigma$**            |               **$\ge 6.00\ \sigma$**                | 🏆 **Achieved World-Class $6\text{-Sigma}$**  |
+| Statistical Performance Metric                  | Pre-Implementation State (Up to April 1st) |  Post-Implementation State (From April 2nd Onward)  |                      Operational Status / Shift                      |
+| :---------------------------------------------- | :----------------------------------------: | :-------------------------------------------------: | :------------------------------------------------------------------: |
+| **Average Daily Cycle Time ($\mu$)**            |          **$1.319\text{ Hours}$**          | **$0.030\text{ Hours } (\approx 1.8\text{ mins})$** |                     📉 **$97.7\%$ Latency Drop**                     |
+| **Process Standard Deviation ($\sigma$)**       |            $0.448\text{ Hours}$            |                $0.004\text{ Hours}$                 |                    🎯 **Total Process Stability**                    |
+| **Defects Captured (Over $1.5\text{ hr}$ USL)** |         $10\text{ Process Breaks}$         |              $0\text{ Process Breaks}$              |                    🚀 **Zero Pipeline Failures**                     |
+| **Defects Per Million Opportunities (DPMO)**    |               **$747,253$**                |                    **$87,912$**                     |            💎 **Eliminated $659\text{k}$ Yield Defects**             |
+| **Process Sigma Quality Level Score**           |           **$-0.6659\ \sigma$**            |                **$1.3537\ \sigma$**                 | 🏆 **Achieved toward Industry Average Benchmark +2.00𝜎 to +3.00𝜎** |
 
 > 📌 **Statistical Audit Reconciliation Note:**
 > * **Hard Failure Limit ($USL = 1.500\text{ hrs}$):** Evaluated above for SPC control chart stability, representing catastrophic daily operational breaks ($10/78\text{ runs} = 128,205\text{ DPMO} \rightarrow 2.63\sigma$ with $1.5\sigma$ shift).
