@@ -24,32 +24,36 @@ Developed a dynamic Power Query architecture that ingests expanding year-to-date
 The project maintains a structured folder hierarchy that replicates a real-world enterprise financial data environment. The directory layout is preserved exactly as is to protect global file-path parameter links built into the Power Query engine.
 ```
 📁 Automated-FPnA-Reporting-Transformation/
-└── 📁 Variance Analysis/                # Core Analytics & Pipeline Directory
-│	├── 📁 2025/                         # Historical Financial Year Data
-│	│   ├── 📁 Monthly/                  # January to December Adjusted Month-End Actuals
-│	│   └── 📁 Weekly/                   # Chronological Week 01 to Week 53 Actuals
-│	├── 📁 2026/                         # Current Financial Year Data (YTD)
-│	│   ├── 📁 Monthly/                  # Closed Books Actuals (Jan - June) + Open Month (July)
-│	│   └── 📁 Weekly/                   # Active Weeks (Current Month Work-in-Progress Data)
-│	├── 📄 Company Data.xlsx             # Central Workbook hosting Master Datasets & Reference Tables
-│	│   ├── 📊 Sheet1 (Pivot Analysis)   # Legacy Pivot Reconciliations
-│	│   ├── 📊 General Ledger            # Chart of Accounts (GL Numbers, Sub-Categories, GAAP Groupings)
-│	│   ├── 📊 Department List           # Dept Codes mapped to L1/Director Level Managers & Emails
-│	│   ├── 📊 Employee Data             # Unique Employee IDs, Reporting Structures, and Active Status
-│	│   ├── 📊 Monthly Budget            # Static OPEX & SG&A Financial Year Budgets
-│	│   ├── 📊 Weekly Budget 2025        # 53-Week Target Distribution Matrix (Prior Year)
-│	│   └── 📊 Weekly Budget 2026        # 53-Week Target Distribution Matrix (Current Year)
-│	├── 📊 Variance Analysis.pbix        # Unified Power BI Analytics Engine & Relational Star Schema Model
+.
+├── 🖼️ Images/                                 # Visualizations, SPC Charts & Root Cause Diagrams 🖼️
+│   ├── Fishbone Diagram.png
+│   ├── Process Pareto Chart.png
+│   └── Statistical Process Control (SPC) Chart.png
 │
-├── 📄 README.md                                    # Project Portfolio Landing Page
-├── 📄 Project Charter.md                           # Business Case, Scope Boundaries & CTQs
-├── 📄 DMAIC Report.md                              # Full Process Documentation (Define-Control)
-├── 📄 SOP.md                                       # Standard Operating Procedure for Operators
+├── 🟢 Six Sigma Green Belt reports/           # DMAIC Framework & Statistical Analysis Reports 📊
+│   ├── Brief Overview of the reporting process.md
+│   ├── DMAIC Report.md
+│   ├── DMAIC Root Cause Identification (Fishbone).md
+│   ├── Historical Data Analysis.xlsx
+│   ├── Process Optimization Bottlenecks (Pareto Chart).md
+│   ├── Project Charter.md
+│   ├── SOP.md
+│   ├── Statistical Baselining & Continual Improvement Framework.md
+│   └── Statistical Process Control (SPC).md
 │
-├── 📕 Brief Overview of the reporting process.md  # Project SOP Documentation Export
-├── 📕 DMAIC Root Cause Identification (Fishbone Diagram).md
-├── 📕 Process Optimization Bottlenecks (Pareto Chart).md
-└── 📕 Statistical Process Control (SPC).md
+├── 📊 Variance Analysis/                      # Power BI Model, Dynamic ETL Pipelines & Data Sources ⚡
+│   ├── 📂2025/                               # Prior-year transaction inputs 📂
+│   │   ├── 📂Monthly/
+│   │   └── 📂Weekly/
+│   ├── 📂2026/                               # Current-year transaction inputs 📂
+│   │   ├── 📂Monthly/
+│   │   └── 📂Weekly/
+│   ├── Company Data.xlsx                   # Master Data (Employee Master, GL, Departments) 📑
+│   ├── Credit_Cards_Data Inputs.xlsx       # Raw transaction inputs 💳
+│   ├── Variance Analysis.pbix              # Production-grade Power BI Star Schema Dashboard 📈
+│   └── Variance Analysis.pdf               # Executive Presentation & Reporting Pack 📄
+│
+└── Readme.md                               # Project Portfolio Root Documentation 🚀
 ```
 ### 🔍 Architectural Highlights:
 * **M-Code Compatibility:** The folder naming convention directly mirrors the internal Power Query dynamic file-ingestion parameters, supporting multi-year automated evaluations.
