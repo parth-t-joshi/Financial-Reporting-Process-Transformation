@@ -32,6 +32,7 @@ The project maintains a structured folder hierarchy that replicates a real-world
 │
 ├── 🟢 Six Sigma Green Belt reports/           # DMAIC Framework & Statistical Analysis Reports 📊
 │   ├── Brief Overview of the reporting process.md
+│   ├── DMAIC Phase 4 - Improve Phase Report & Implementation Verification.md
 │   ├── DMAIC Report.md
 │   ├── DMAIC Root Cause Identification (Fishbone).md
 │   ├── Historical Data Analysis.xlsx
