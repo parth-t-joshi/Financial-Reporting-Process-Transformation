@@ -1,5 +1,4 @@
 # DMAIC Root Cause Identification: Fishbone Diagram Summary
-
 **The Defect:** Weekly SG&A Expenses reporting cycle requires **48 hours to complete** and Monthly **36 hours to complete**, hindering real-time decision-making.
 
 | Category (Rib)  | Primary Root Causes & Process Drivers                                                                                                                                                                                                                                                            | Link to DMAIC Waste (Muda)                                    | Impact on Final Dashboard (.pbix)                                                                                   |

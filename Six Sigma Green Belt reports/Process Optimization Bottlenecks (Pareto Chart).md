@@ -1,9 +1,6 @@
 # 📊 Pareto Chart: Process Optimization Bottlenecks
-
 This Pareto analysis proves that manual column alignment and cross-month split-week reconciliation represent the primary operational bottlenecks slowing down the SG&A reporting cycle.
-
 ## 📝 Process Friction Breakdown Matrix
-
 Integrate this matrix directly into your **Measure/Analyze Phase** documentation to demonstrate a calculated, data-driven automation strategy:
 
 |   Rank    | Manual Reporting Process Step                                                                                   | Hours Spent Per Cycle | Individual % | Cumulative % | Six Sigma Optimization Target                                       |
@@ -18,9 +15,6 @@ Integrate this matrix directly into your **Measure/Analyze Phase** documentation
 ![Pareto Chart](/Images/Process%20Pareto%20Chart.png)
 
 ---
-
 ## 🎯 Strategic Takeaways
-
 Instead of categorizing friction by generic financial department themes, this time-and-motion study maps the exact **procedural steps and technical friction points** where operational bandwidth is wasted.
-
 By mapping the process steps in this hierarchy, you visually demonstrate to Lean Six Sigma auditors and executive leadership that targeting the top two procedural mechanics eliminates **73.8%** of reporting delays—and addressing the top three eliminates **88.1%** of total process lead time.
