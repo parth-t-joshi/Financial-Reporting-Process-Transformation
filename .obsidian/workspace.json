@@ -20,8 +20,51 @@
               "icon": "lucide-file",
               "title": "Readme"
             }
+          },
+          {
+            "id": "a2793a9b6a0f201b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Readme.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Readme"
+            }
+          },
+          {
+            "id": "e3ddb5c812297fae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Readme.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Readme"
+            }
+          },
+          {
+            "id": "ea1cf80bc5f60a43",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Six Sigma Green Belt reports/Brief Overview of the reporting process.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Brief Overview of the reporting process"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -33,6 +76,7 @@
       {
         "id": "af35486ae807c8a4",
         "type": "tabs",
+        "dimension": 43.53535353535353,
         "children": [
           {
             "id": "efdf346d9961a7c3",
@@ -41,7 +85,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false,
+                "autoReveal": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -77,6 +121,28 @@
             }
           }
         ]
+      },
+      {
+        "id": "4bda2a7ba489d722",
+        "type": "tabs",
+        "dimension": 56.464646464646464,
+        "children": [
+          {
+            "id": "3fff93f07a5666e6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Six Sigma Green Belt reports/Brief Overview of the reporting process.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -96,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Six Sigma Green Belt reports/Statistical Process Control (SPC).md",
+                "file": "Six Sigma Green Belt reports/Brief Overview of the reporting process.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +172,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Statistical Process Control (SPC)"
+              "title": "Backlinks"
             }
           },
           {
@@ -151,28 +217,13 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
-          },
-          {
-            "id": "3fff93f07a5666e6",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Readme.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 472.5
+    "width": 683.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,45 +237,52 @@
       "copilot:Open Copilot Agent Chat": false
     }
   },
-  "active": "3c38ee44151bb754",
+  "active": "efdf346d9961a7c3",
   "lastOpenFiles": [
-    "Six Sigma Green Belt reports/Statistical Process Control (SPC).md",
-    "Six Sigma Green Belt reports/Project Charter.md",
-    "Six Sigma Green Belt reports/Statistical Baselining & Continual Improvement Framework.md",
     "Six Sigma Green Belt reports/DMAIC Phase 4 - Improve Phase Report & Implementation Verification.md",
-    "Readme.md",
-    "Six Sigma Green Belt reports/SOP.md",
-    "copilot/copilot-conversations/agent__Statistical_Baselining_&_Continual_Improvement_Framework_DMAIC_Phase_4_-@20261006_171904.md",
     "Six Sigma Green Belt reports/DMAIC Report.md",
-    "copilot/copilot-conversations/agent__Statistical_Process_Control_(SPC)_Readme_DMAIC_Report_Project_Charter_SPC@20261006_165142.md",
-    "copilot/copilot-conversations",
-    "copilot/skills/obsidian-cli/SKILL.md",
-    "copilot/skills/obsidian-cli/LICENSE",
-    "copilot/skills/obsidian-cli",
-    "copilot/skills/json-canvas/SKILL.md",
-    "copilot/skills/json-canvas/LICENSE",
-    "copilot/skills/json-canvas/references/EXAMPLES.md",
-    "copilot/skills/json-canvas/references",
-    "copilot/skills/json-canvas",
-    "copilot/skills/obsidian-bases/SKILL.md",
-    "copilot/skills/obsidian-bases/LICENSE",
-    "copilot/skills/obsidian-bases/references/EXAMPLES.md",
-    "copilot/skills/obsidian-bases/references/FUNCTIONS_REFERENCE.md",
-    "copilot/skills/obsidian-bases/references",
-    "copilot/skills/obsidian-bases",
-    "copilot/skills/obsidian-markdown/SKILL.md",
-    "copilot/skills/obsidian-markdown/LICENSE",
-    "copilot/skills/obsidian-markdown/references/PROPERTIES.md",
-    "copilot/skills/obsidian-markdown/references/EMBEDS.md",
-    "copilot/skills/obsidian-markdown/references/CALLOUTS.md",
-    "copilot/skills/openartifacts-publish/SKILL.md",
-    "copilot/skills/openartifacts-publish/themes/research-memo.md",
-    "copilot/skills/copilot-fetch-x/SKILL.md",
-    "copilot/skills/copilot-youtube-transcript/SKILL.md",
-    "Six Sigma Green Belt reports/Process Optimization Bottlenecks (Pareto Chart).md",
+    "Readme.md",
+    "Six Sigma Green Belt reports/Project Charter.md",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/dmaic-statements-verification.json",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/dmaic-before-screenshot-statements.md",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/restore-dmaic-statements.py",
+    "copilot/copilot-conversations/attachments/copilot-image-0e891f95b8d7c7148ad9aa785d69fef1e002ddfbf1deec0b18b361c3ef4231bb.png",
+    "Six Sigma Green Belt reports/SOP.md",
+    "Six Sigma Green Belt reports/Statistical Baselining & Continual Improvement Framework.md",
+    "Six Sigma Green Belt reports/Statistical Process Control (SPC).md",
     "Six Sigma Green Belt reports/DMAIC Root Cause Identification (Fishbone).md",
+    "Six Sigma Green Belt reports/Process Optimization Bottlenecks (Pareto Chart).md",
+    "Evidence Reconciliation.md",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/charter-problem-verification.json",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/charter-before-screenshot-problem.md",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/restore-charter-problem.py",
+    "copilot/copilot-conversations/attachments/copilot-image-bbad929d8155b017c8ab7507c20748d7d3a09ac4c739e6fd9870925b56027480.png",
     "Six Sigma Green Belt reports/Brief Overview of the reporting process.md",
-    "Pasted image 20260727111100.png",
-    "Images/Statistical Process Control (SPC) Chart.png"
+    "copilot/projects/FP%26A Green Belt/outputs/github/Images/Process Pareto Chart.png.md",
+    "copilot/projects/FP&A Green Belt/outputs/Correction Summary.md",
+    "Variance Analysis/FP&A Analysis and Reconciliation.md",
+    "Variance Analysis/Power BI Implementation Evidence.md",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/spc-ledger-verification.json",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/spc-before-ledger.md",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/add-spc-ledger.py",
+    "copilot/copilot-conversations/attachments/copilot-image-54331d6d7e1b5a98aa56fb2ccaedac19e8b71b6a62e97a4e81f2b665ff53fb94.png",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/readme-architecture-verification.json",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/root-before-architecture.md",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/update-readme-architecture.py",
+    "copilot/projects/FP&A Green Belt/outputs/originals/ARCHIVE NOTICE.md",
+    "copilot/copilot-conversations/attachments/copilot-image-0272bf291bcf5e927e386ed6c7dc84cdb3a264da90c9929bdc871a954e784841.png",
+    "copilot/copilot-conversations/attachments/copilot-image-e3718b9aaa438c4cd386a69219091f70e4997fe6675af27f502b8488683dac56.png",
+    "copilot/copilot-conversations/attachments",
+    "Variance Analysis/Variance Analysis.pdf",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/root-readme-vault-prepared.md",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/root-links-before.md",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/root-readme-prepared.md",
+    "copilot/projects/FP&A Green Belt/outputs/github/Images/Statistical Process Control (SPC) Chart.png",
+    "copilot/projects/FP&A Green Belt/outputs/github/Images/Process Pareto Chart.png",
+    "copilot/projects/FP&A Green Belt/outputs/github/Six Sigma Green Belt reports/Statistical Process Control (SPC).md",
+    "copilot/projects/FP&A Green Belt/outputs/github/Six Sigma Green Belt reports/Statistical Baselining & Continual Improvement Framework.md",
+    "copilot/projects/FP&A Green Belt/outputs/github/Images/Fishbone Diagram.png",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/source-final-records-preview.png",
+    "copilot/projects/FP&A Green Belt/outputs/portfolio-release/source-transition-preview.png"
   ]
 }

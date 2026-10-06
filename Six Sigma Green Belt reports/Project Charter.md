@@ -1,56 +1,84 @@
-Here is a complete, enterprise-grade **Executive Project Charter** tailored specifically to Lean Six Sigma + FP&A automation project. It formally frames manual data consolidation challenges as process "defects" and highlights Power Query/Power BI implementation as the optimal "Improve" phase breakthrough.
-# 📋 Executive Project Charter
-**Project Name:** Automated SG&A Expenses (T&E) Reporting Process Transformation
-**Methodology:** Lean Six Sigma (DMAIC Framework)
-**Project Sponsor:** Director Level Management / CFO
-**Process Owner:** FP&A Team
-## 1. Business Case & Project Background
-In corporate Financial Planning & Analysis (FP&A), managing and reporting Selling, General, and Administrative (SG&A) expenses—specifically Travel & Entertainment (T&E)—is critical for cost control and variance management. Historically, the compilation of these reports relied entirely on manual extraction, alignment, and formatting across multiple disparate datasets.
-As the volume of weekly transactions and monthly book-closes scales throughout the fiscal year, this manual mechanism presents a severe operational bottleneck. It delays decision-making, introduces data-integrity risks, and prevents the finance team from performing higher-value predictive analytics. Transitioning to an automated, parameterized ETL pipeline is essential to guarantee corporate agility and reporting scalability.
-## 2. Problem & Goal Statements
-### 🚨 Problem Statement
-The current SG&A expense reporting process exhibits severe operational instability and excessive cycle time variance across 6 unlinked data sources: Employee Master, Chart of Accounts, Department Catalogs, P&L Group hierarchies, and various Target Budgets.
-Over a 91-day baseline audit, Daily Reporting Latency exceeded the demonstrated capability target of $P_{25} = 1.005\text{ hours}$ on **68 out of 91 days** (process median $P_{50} = 1.140\text{ hours}$), resulting in a **74.73% Non-Compliance (NC) rate**. At its peak crisis window in late June, daily friction spiked to $2.70\text{ hours}$ of active error correction. 
-These daily friction points compound into a cumulative batch lead time of **36 to 48 operational hours** per reporting cycle. Statistically, the baseline process operates at **747,252.75 DPMO** with a **Process Sigma Score of -0.6659σ**, severely underperforming industry standard benchmarks (50,000 DPMO / +2.0σ to +3.0σ).
-### 🎯 Goal Statement
-To execute a leftward distribution shift in Daily Reporting Latency, transitioning the process median from $P_{50} = 1.140\text{ hours}$ to the demonstrated capability limit of $P_{25} = 1.005\text{ hours}$—and ultimately to $<0.03\text{ hours}$ ($<1.8\text{ minutes}$) via an automated Power Query ETL pipeline and Power BI dashboard. 
-The objective is to reduce total batch lead time from **48 hours to < 2 minutes**, eliminate 100% of human-reconciliation errors, reduce DPMO from **747,252.75 to 0**, and project process capability to **$>> +4.50\sigma$** upon sustained compliance.
+# Executive Project Charter
+
+**Project Name:** SG&A (T&E) Variance Reporting Process Transformation  
+**Methodology:** Lean Six Sigma DMAIC  
+**Project Sponsor Role:** Finance leadership (Finance Director / FP&A Lead)  
+**Process Owner Role:** FP&A Manager / FP&A Team  
+**Production Go-Live:** July 1, 2026 — confirmed by the project owner  
+**Documentation Revision:** October 6, 2026
+
+## 1. Business Case and Background
+
+The FP&A team prepares weekly and monthly budget-versus-actual reporting for Selling, General, and Administrative (SG&A) expenses, with a focus on Travel and Entertainment (T&E). The documented legacy workflow manually combined credit-card transaction files with employee, department, account and P&L-group reference mappings, plus weekly/monthly budget inputs.
+
+Split weeks at month-end, changes in employee status, and repeated lookup and formatting work create preparation and reconciliation demands. This project applies Power Query transformations and a Power BI reporting model to reduce repetitive work and improve maintainability. Financial ROI and quantified time savings require verified costs and comparable time studies.
+
+## 2. Problem and Goal Statements
+
+### 2.1 Problem Statement
+
+The current SG&A expense reporting process exhibits severe operational instability and excessive cycle time variance across 6 linked data sources: Employee Master, Chart of Accounts, Department Catalogs, P&L Group hierarchies, and various Target Budgets. Over a 91-day baseline audit, Daily Reporting Latency exceeded the demonstrated capability target of $P_{25} = 1.005\text{ hours}$ on **68 out of 91 days** (process median $P_{50} = 1.140\text{ hours}$), resulting in a **74.73% Non-Compliance (NC) rate**. At its peak crisis window in late June, daily friction spiked to $2.70\text{ hours}$ of active error correction. These daily friction points compound into a cumulative batch lead time of **36 to 48 operational hours** per reporting cycle. Statistically, the baseline process operates at **747,252.75 DPMO** with a **Process Sigma Score of -0.6659σ**, severely underperforming industry standard benchmarks (50,000 DPMO / +2.0σ to +3.0σ).
+
+### 2.2 Goal Statement
+
+Automate the documented transaction-ingestion and transformation steps, maintain usable historical employee/account mappings, and produce a maintainable SG&A budget-versus-actual model. Retain reconciliation and review before report delivery.
+
+The proposed model-refresh target is **less than 2 minutes**. The **0.029-hour (1.74-minute) workbook-derived reference** is a sample-derived historical threshold, not a second operating target; it is not an approved release threshold or achieved service level. The inherited **1.005-hour benchmark**, derived from a mixed 91-row range, is unvalidated and is not an upper specification limit.
+
+Financial acceptance requires matched budget/actual period, grain, currency and budget version, with an explicit expense-variance sign convention. The proposed GL control requires an independent closed-GL actuals export or control-total source, not the chart of accounts. That source and the reconciliation implementation are not verified in the available inventory.
+
+No percentage reduction, sigma level, DPMO capability result, or claim of error-free reporting is established by this charter.
+
 ## 3. Project Scope
-| **In-Scope (What is Included)**                                               | **Out-of-Scope (What is Excluded)**                                   |
-| ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| • Integration of multi-year operational credit card data (2025–2026 Actuals). | • Modifying upstream ERP/Accounting system transaction entries.       |
-| • Consolidation of Master Data sets (Employees, Departments, GL Accounts).    | • Strategic budgeting re-forecasting logic (handled by management).   |
-| • Automation of both Weekly and Monthly budget-variance calculations.         | • Automated email distribution infrastructure (e.g., Power Automate). |
-| • Parameterization of the data source path for global model portability.      | • Managing non-SG&A corporate expenditure streams (e.g., CAPEX).      |
-## 4. Process Boundaries (SIPOC Framework)
-- **Suppliers:** Accounting/ERP Team, HR Department, PMO/Finance Budget Owners.
-- **Inputs:** 2025/2026 Weekly & Monthly Actuals (Credit Card Sheets), Master Employee List, Chart of Accounts (GL List), Department Hierarchies, Weekly/Monthly Target Budgets.
-- **Process:** Extract raw transaction and target matrices $\rightarrow$ Apply M-Code schema transformations in Power Query $\rightarrow$ Formulate dynamic relationship mappings $\rightarrow$ Generate automated variance visualizations.
-- **Outputs:** Interactive Power BI Star-Schema Model (`Variance Analysis.pbix`), Automated Budget Variances, YTD Expenditures, and Dynamic Managerial Dashboards.
-- **Customers:** Director-Level Managers (L1/L2), FP&A Leadership, Corporate Executive Teams.
-## 5. Critical to Quality (CTQ) Metrics
-To track process capability, the project measures success against three vital metrics:
-1. **Cycle Time:** The absolute duration elapsed from receiving data inputs to delivering finalized reports to stakeholders (Target: **$< 2$ minutes**).
-2. **Data Accuracy:** Zero variance between aggregated pipeline actuals and finalized General Ledger accounting records (Target: **100% Accuracy / 0 DPMO**).
-3. **Portability / Maintainability:** Ability for external users to alter global directories through centralized parameter keys without code disruption (Target: **$< 1$ minute parameter setup**).
-## 6. Project Milestones & Timeline (DMAIC)
-```
-[Define] ───► [Measure] ───► [Analyze] ───► [Improve] ───► [Control]
- Formalize     Quantify       Isolate Process   Build ETL    Parameterize &
- Charter &     Baseline       Bottlenecks &    Pipeline &    Deploy Standard
- Scope         Defects        Error Sources    Dashboards    Operating Procedure
-```
-- **Define:** Establish the charter, baseline problem scopes, and document process stakeholders (Completed).
-- **Measure:** Map legacy folder dependencies, catalog the 6 source schemas, and record manual calculation cycle times (Completed).
-- **Analyze:** Isolate structural breakages caused by manual reconciliations and find the root causes behind data pipeline latencies (Completed).
-- **Improve:** Engineer a parameterized ETL framework inside the Power Query engine and design a relational Star-Schema dashboard in Power BI (Completed).
-- **Control:** Deploy a unified global path parameter framework to decouple model execution from local workstation paths; draft standard operating documentation to guarantee sustainability (In-Progress).
-### 📈 Post-Implementation Performance Update (As of July 2026)
 
-**Single Source of Truth:** All post-implementation figures are derived from the raw audit data in `DMAIC Phase 4 - Improve Phase Report & Implementation Verification` ($N = 91$ days; median $P_{50} = 0.029\text{ hrs}$; $\mu = 0.02918\text{ hrs}$; $\sigma = 0.001376\text{ hrs}$; range $0.023 - 0.035\text{ hrs}$). Against the legacy specification benchmark ($P_{25} = 1.005\text{ hrs}$), **zero** of the 91 post-go-live days exceed spec, yielding **$0\text{ DPMO}$** (0 defects observed). This 0-defect result is **consistent with a $\ge 6.00\sigma$ world-class projection**, but a formal capability study (≥3.4M observations for 95% confidence at 6.0σ) is required to statistically demonstrate a 6σ level.
+| In scope | Out of scope |
+| --- | --- |
+| Integrating documented 2025–2026 credit-card transaction inputs | Changing upstream ERP/accounting transaction entries |
+| Mapping employee, department, GL-account, and P&L-group reference data | Strategic budget reforecasting decisions |
+| Automating weekly/monthly budget-versus-actual transformations | Automated email-distribution infrastructure, including Power Automate |
+| Parameterizing the data-source path for model portability | Managing non-SG&A expenditure streams such as CAPEX |
+| Defining filing, reconciliation, exception, and monitoring procedures | Claiming deployed scheduled refresh or alerting without configuration evidence |
 
-Following the July 1st Power BI Go-Live, the daily active latency was successfully crushed to 0.03 hours ($\approx 1.8$ minutes). Consequently, the total cumulative batch cycle time dropped from 48 hours down to an on-demand, single-click refresh, permanently eliminating the end-of-period bottleneck. The project is now concluding its final Control Phase documentation.
-## 7. Project Team Roles & Responsibilities
-- **Six Sigma Green Belt / Data Architect:** _[PARTH JOSHI]_ — Responsible for process scoping, data modeling, Power Query pipeline engineering, and dashboard development.
-- **Project Sponsor:** Finance Director / FP&A Lead — Responsible for approving business requirements, validating variance calculations, and auditing model outputs against corporate financial parameters.
-- **Key Stakeholders:** Department Directors (L1) — End-users who consume data visualizations to manage operational expenditure targets.
+## 4. Process Boundaries (SIPOC)
+
+- **Suppliers:** Accounting/ERP team, HR data owners, and FP&A budget owners.
+- **Inputs:** Weekly/monthly credit-card actuals, Employee Master, Chart of Accounts, department/P&L mappings and weekly/monthly budgets; independent closed-GL actuals/control totals are required for the proposed reconciliation and remain to be identified.
+- **Process:** Extract inputs → validate and file → transform and map in Power Query → refresh Power BI → reconcile and review → deliver outputs.
+- **Documented outputs:** Variance Analysis.pbix, expense aggregates, budget variances, year-to-date views and managerial reports; direct model/measure inspection and retained review evidence remain pending.
+- **Customers:** Department managers (L1/L2), FP&A leadership, and corporate finance leadership.
+
+See [[Brief Overview of the reporting process]] for the source inventory and [[DMAIC Report]] for the phase narrative.
+
+## 5. Critical-to-Quality Measures and Targets
+
+| Measure | Definition | Target | Evidence required |
+| --- | --- | --- | --- |
+| Model-refresh duration | Start of refresh to successful model-refresh completion | Less than 2 minutes; 0.029-hour workbook reference pending target review | Dated start/end records, environment, input volume, and successful completion |
+| End-to-end reporting lead time | Receipt of required inputs to delivery of the reconciled and reviewed report | To be set after a comparable baseline is established | Input-receipt, reconciliation, review, and delivery timestamps |
+| GL reconciliation gap | Model actuals minus independent closed-GL actuals for the same period, currency, accounts and scope | Proposed $0.00 gap at documented amount precision and rounding | Independent GL export/control totals, comparison and resolved exceptions; the source and implementation remain unverified, and a zero total gap alone does not prove record accuracy |
+| Input completeness and mapping | Expected source coverage, required fields, and usable employee/account/department keys | No unresolved missing files, duplicate transactions, or unmapped keys at release | Source inventory, exception logs, and reviewed resolution |
+| Path configuration | Configure the maintained FolderPath and verify it resolves to the local Variance Analysis folder | Less than 1 minute | Setup timing and a successful source-access check |
+
+The numerical targets above are proposed operational targets. They do not establish achieved performance or statistical control limits. [[SOP#7. Control Matrix|SOP Control Matrix]] owns ongoing monitoring and corrective responses.
+
+## 6. Project Milestones and Status
+
+| DMAIC phase | Documented deliverable | Status and date evidence |
+| --- | --- | --- |
+| Define | Charter, scope, SIPOC, and proposed targets | Documented; formal approval date not recorded here |
+| Measure | Source inventory and historical timing workbook | Available; chronology and measurement definitions require reconciliation |
+| Analyze | Fishbone hypotheses and Pareto activity allocation | Documented; causal validation and timing basis require verification |
+| Improve | Documented Power Query changes and Power BI model | Production go-live confirmed **July 1, 2026**; implementation inspection and comparable outcome validation remain pending |
+| Control | SOP, control matrix, operational records, and statistical monitoring method | Documentation revised **October 6, 2026**; deployment evidence and formal approval are not asserted |
+
+The historical workbook remains unchanged. Its recorded dates must be reconciled rather than replaced to match the confirmed production date. Numerical verification belongs in [[DMAIC Phase 4 - Improve Phase Report & Implementation Verification]], supported by [[Evidence Reconciliation|Evidence Reconciliation]].
+
+## 7. Project Team Roles and Responsibilities
+
+- **Project Lead — Parth Joshi:** Process scoping, source mapping, Power Query transformation design, Power BI model design documentation and technical change review. This describes project contribution, rather than a verified job title or certification.
+- **Project Sponsor Role — Finance leadership (Finance Director / FP&A Lead):** Business-requirement review, validation priorities and approval of material changes.
+- **FP&A Analyst / Process Operator:** Transaction filing, reference-data maintenance, refresh execution, reconciliation, and retained run evidence.
+- **FP&A Manager:** Review of reporting exceptions, reconciliations, and release decisions.
+- **Department Managers (L1/L2):** Consumers of expense and variance reporting for their departments.
+
+These are documented role responsibilities; appointments, professional credentials and approval records are not verified by this revision.
