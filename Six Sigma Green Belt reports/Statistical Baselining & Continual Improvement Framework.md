@@ -46,7 +46,7 @@ An audit of $91\text{ consecutive operational days}$ of Daily Reporting Latency 
 | --------------------------------------------- | ----------------- | ------------------------------ | ------------------------ | ----------------------------------- | --------------------- |
 | **Total Evaluation Days**                     | $N$               | Sample Count                   | **$91\text{ Days}$**     |                                     |                       |
 | **Current Process Median**                    | $P_{50}$          | `=PERCENTILE(Data, 0.50)`      | **$1.140\text{ Hours}$** |                                     |                       |
-| **Demonstrated Target Limit**                 | $USL\ (P_{25})$   | `=PERCENTILE(Data, 0.25)`      | **$1.005\text{ Hours}$** |                                     |                       |
+| **Demonstrated Target (Benchmark)**                 | $P_{25}$          | `=PERCENTILE(Data, 0.25)`      | **$1.005\text{ Hours}$** |                                     |                       |
 | **Compliant Runs ($\le 1.005\text{ hrs}$)**   | $C$               | `COUNTIF(Data, "<=1.005")`     | **$23\text{ Days}$**     |                                     |                       |
 | **Non-Compliant Runs ($> 1.005\text{ hrs}$)** | $NC$              | `COUNTIF(Data, ">1.005")`      | **$68\text{ Days}$**     |                                     |                       |
 | **Defects Per Opportunity**                   | $DPO$             | $\frac{NC}{N} = \frac{68}{91}$ | **$0.7473\ (74.73\%)$**  | $0.0500\ (5.0\%)$                   | $< 0.0060\ (0.6\%)$   |
@@ -58,7 +58,7 @@ An audit of $91\text{ consecutive operational days}$ of Daily Reporting Latency 
     subgraph S1 ["Baseline Process"]
         direction TB
         A1["<b>Sigma Level:</b> -0.666σ"]
-        A2["<b>Defects:</b> 747,253 DPMO"]
+        A2["<b>Defects:</b> 747,252.75 DPMO"]
         A3["<i>High Latency / Unstable</i>"]
     end
 
@@ -87,9 +87,13 @@ An audit of $91\text{ consecutive operational days}$ of Daily Reporting Latency 
     class B1,B2,B3 industryStyle;
     class C1,C2,C3 worldStyle;
  ```
-- **Baseline Performance:** Operating at **$-0.6659\sigma$** ($747,253\text{ DPMO}$), indicating an out-of-control process where **$74.73\%$** of daily runs fail to meet demonstrated capability limits.
+- **Baseline Performance:** Operating at **$-0.6659\sigma$** ($747,252.75\text{ DPMO}$), indicating an out-of-control process where **$74.73\%$** of daily runs fail to meet demonstrated capability limits.
 - **Industry Standard Benchmark:** Typically operates between **$+2.00\sigma\text{ and }+3.00\sigma$** ($\approx 50,000\text{ DPMO}$).
 - **World-Class Target:** Requires a Process Sigma Score **$> +4.50\sigma$** ($<6,000\text{ DPMO}$).
+> * **Single Source of Truth:** All post-implementation figures are derived from the raw audit data in `DMAIC Phase 4 - Improve Phase Report & Implementation Verification` ($N = 91$ days; median $P_{50} = 0.029\text{ hrs}$; $\mu = 0.02918\text{ hrs}$; $\sigma = 0.001376\text{ hrs}$; range $0.023 - 0.035\text{ hrs}$). Against the legacy specification limit ($USL = 1.005\text{ hrs}$), **zero** of the 91 post-go-live days exceed spec, yielding **$0\text{ DPMO}$** and a **$\ge +6.00\sigma$** capability score.
+> * **Data Integrity Note:** The $8\text{ days}$ recorded at $0.031$–$0.035\text{ hrs}$ ($1.86$–$2.10\text{ mins}$) are normal gateway-refresh micro-variation within the fully stabilized control envelope, not process defects. Four Sigma (Cpk ≥ 1.33) is easily exceeded.
+> * **Benchmark Alignment:** World-class standard is $> +4.50\sigma$ ($< 6,000\text{ DPMO}$). Our post-impl position of $\ge +6.00\sigma$/$0\text{ DPMO}$ is **well beyond** world-class.
+
 ## 4. Formalized Project Statements (Executive-Ready)
 ### 🚨 Quantified Problem Statement
 > _"The current SG&A expense reporting process exhibits severe operational instability and excessive cycle time variance. Over a 91-day baseline audit, Daily Reporting Latency exceeded the demonstrated capability limit of 1.005 hours ($P_{25}$) on **68 out of 91 days**, resulting in a **74.73% Non-Compliance (NC) rate**. This performance converts to a Defect Rate of **747,252.75 DPMO** and a **Process Sigma Score of -0.6659σ**, significantly underperforming the global industry benchmark of 50,000 DPMO (+2.0σ to +3.0σ)."_

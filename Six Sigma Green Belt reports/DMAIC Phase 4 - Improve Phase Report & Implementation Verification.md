@@ -50,13 +50,16 @@ An audit of **$91\text{ consecutive operational days}$** post-implementation dem
 | **Process Variance ($\sigma$)** | **$0.596\text{ Hours}$ ($35.75\text{ mins}$)** | **$0.0014\text{ Hours}$ ($0.08\text{ mins}$)** | **▼ $99.77\%$ Variance Elimination** |
 | **Min / Max Latency Range** | $0.890\text{ hrs} \rightarrow 1.420\text{ hrs}$ | **$0.023\text{ hrs} \rightarrow 0.035\text{ hrs}$ ($1.38 - 2.10\text{ mins}$)** | Tight Operational Envelope |
 | **Defects vs. Baseline Spec ($>1.005\text{ hrs}$)** | **68 Days ($74.73\%$ DPO)** | **0 Days ($0.00\%$ DPO)** | **100% Compliance Achieved** |
-| **Process Sigma Score ($Z$)** | **$-0.6659\sigma$** | **$\ge +6.00\sigma$ (World-Class)** | Shifted to Zero-Defect Baseline |
+| **Process Sigma Score ($Z$)** | **$-0.6659\sigma$** | **$\ge +6.00\sigma$ (world-class projection:<br>0 defects in 91-day sample)** | Shifted to Zero-Defect Baseline |
 
 ---
 ## 3. Resolution & Analysis of Post-Implementation Performance
 > [!hint] ### 💡 Key Operational Finding
-> Against the legacy baseline specification limit ($USL = 1.005\text{ hours}$), post-implementation compliance is **$100\%$**, with maximum latency capped at **$2.10\text{ minutes}$ ($0.035\text{ hours}$)**.
-> > The $8\text{ days}$ recorded between $0.031\text{ hrs}$ and $0.035\text{ hrs}$ ($1.86 - 2.10\text{ mins}$) do **not** represent functional defects or process failures. They represent minimal, acceptable network micro-variations during cloud data gateway refreshes (~20-second fluctuations) within a completely stabilized, sub-2.1-minute process envelope.
+> Against the legacy baseline specification limit ($P_{25} = 1.005\text{ hours}$), post-implementation compliance is **$100\%$**, with maximum latency capped at **$2.10\text{ minutes}$ ($0.035\text{ hours}$)**.
+&gt; &gt; The $8\text{ days}$ recorded between $0.031\text{ hrs}$ and $0.035\text{ hrs}$ ($1.86 - 2.10\text{ mins}$) do **not** represent functional defects or process failures. They represent minimal, acceptable network micro-variations during cloud data gateway refreshes (~20-second fluctuations) within a completely stabilized, sub-2.1-minute process envelope.
+>
+> * **Single Source of Truth:** All post-implementation figures are derived from the raw audit data in this document itself ($N = 91$ days; median $P_{50} = 0.029\text{ hrs}$; $\mu = 0.02918\text{ hrs}$; $\sigma = 0.001376\text{ hrs}$; range $0.023 - 0.035\text{ hrs}$). **Zero defects observed** against the legacy specification limit ($P_{25} = 1.005\text{ hrs}$) yields $0.00\text{ DPMO}$. This 0-defect result is **consistent with a ≥6.00σ world-class projection**, but a formal capability study (≥3.4M observations for 95% confidence at 6.0σ) is required to statistically demonstrate a 6σ level.
+> * **Control Limit vs. Specification Limit:** The $0.035\text{ hrs}$ upper bound in the range data is the **process maximum observed**, **not** a control limit or defect threshold. The process control envelope is stated separately in the [SPC Chart](/Images/Statistical%20Process%20Control%20(SPC)%20Chart.png) with an UCL of $0.035\text{ hrs}$ ($2.1\text{ mins}$).
 
 ```
                            PROCESS LATENCY DISTRIBUTION SHIFT

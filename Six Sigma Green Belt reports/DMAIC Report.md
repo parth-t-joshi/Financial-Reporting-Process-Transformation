@@ -11,7 +11,7 @@ The legacy T&E reporting mechanism required manual collection and relational map
 - **Cycle Time Defect:** Manual extraction, restructuring, and report formulation generated a total batch lead time of **36 to 48 business hours** per reporting iteration.
 - **Daily Ingestion Friction:** Over a 91-day baseline evaluation, Daily Reporting Latency exceeded the demonstrated capability threshold ($P_{25} = 1.005\text{ hours}$) on **68 out of 91 days** (process median $P_{50} = 1.140\text{ hours}$), reaching a peak spike of **2.70 hours** in late June.
 - **Quality & Capability Defect:** Manual operations generated a **74.73% Non-Compliance (NC) rate**, translating to **747,252.75 DPMO** and a **Baseline Process Sigma Score of -0.6659σ**, indicating an out-of-control operational state.
-In other words, performance is lower than statistical goal. i.e. NC = 74.72%; with DPMO value of 747252.7 and sigma score of -0.66587
+In other words, performance is lower than statistical goal. i.e. NC = 74.73%; with DPMO value of 747,252.75 and sigma score of -0.6659.
 ### 1.3 Project Goal Statement
 To execute a leftward distribution shift in Daily Reporting Latency, transitioning the process median from $P_{50} = 1.140\text{ hours}$ to the demonstrated benchmark of $P_{25} = 1.005\text{ hours}$—and ultimately to $<0.03\text{ hours}$ ($<1.8\text{ minutes}$) via an automated Power Query ETL engine and interactive Star-Schema data model in Power BI. The objective includes reducing batch cycle time from **48 hours to under 2 minutes**, maintaining 100% data integrity, eliminating human-reconciliation defects ($0\text{ DPMO}$), and elevating overall process capability to **≥ 6.00σ**.
 ### 1.4 Process Boundaries (SIPOC Framework)
@@ -49,20 +49,20 @@ Rather than setting an arbitrary, unvalidated stretch target, the baseline targe
 - **25th Percentile Target ($P_{25}$):** $1.005\text{ Hours}$.
 - **Rationale:** Historically, the legacy process achieved a latency of $\le 1.005\text{ hours}$ on $25\%$ of evaluated days. Because the system demonstrated the ability to reach $1.005\text{ hours}$ under existing conditions, making **today's $P_{25}$ become tomorrow's $P_{50}$** represents a natural, achievable **Left Shift** in the performance bell curve.
 #### C. Pre-Implementation Statistical Defect Metric
-Evaluating all 91 historical sample days against the $1.005\text{-hour}$ specification limit ($USL$) yields:
-- **Non-Compliance (NC) Count:** 68 Days ($> 1.005\text{ hrs}$).
+Evaluating all 91 historical sample days against the $1.005\text{-hour}$ demonstrated performance benchmark ($P_{25}$) yields:
+- **Non-Compliant Runs ($> 1.005\text{ hrs}$):** 68 Days ($74.73\%$).
 - **Defects Per Opportunity (DPO):** $\frac{68}{91} = 0.74725\ (74.73\%)$.
 - **DPMO:** $0.74725 \times 1,000,000 = \mathbf{747,252.75}$.
 - **Baseline Sigma Score ($Z$):** $\Phi^{-1}(1 - 0.74725) = \mathbf{-0.6659\sigma}$.
 Compared to the global industry average benchmark of $\approx 50,000\text{ DPMO}$ ($+2.0\sigma\text{ to }+3.0\sigma$) and best-in-class targets ($<6,000\text{ DPMO}$, $>+4.5\sigma$), the baseline legacy process was statistically out of control, quantitatively establishing the need for automated ETL transformation.
 
-> **Statistical Baseline Justification:** To account for operational skewness and extreme outliers in daily reporting performance, the **Median ($P_{50} = 1.140\text{ hrs}$)** was selected over the mean ($\mu$) to establish central tendency. The **25th Percentile ($P_{25} = 1.005\text{ hrs}$)** was designated as the **Upper Specification Limit ($USL$)**, grounding future targets in proven operational capability.
+> **Statistical Baseline Justification:** To account for operational skewness and extreme outliers in daily reporting performance, the **Median ($P_{50} = 1.140\text{ hrs}$)** was selected over the mean ($\mu$) to establish central tendency. The **25th Percentile ($P_{25} = 1.005\text{ hrs}$)** was designated as the **Demonstrated Performance Benchmark**, grounding future targets in proven operational capability.
 
 | Baseline Parameter / Metric                   | Variable Notation | Formula / Logic                | Baseline Value           |
 | --------------------------------------------- | ----------------- | ------------------------------ | ------------------------ |
 | **Total Evaluation Sample**                   | $N$               | Sample Count                   | **91 Days**              |
 | **Current Process Median**                    | $P_{50}$          | `=PERCENTILE(Data, 0.50)`      | **$1.140\text{ Hours}$** |
-| **Demonstrated Target Limit**                 | $USL\ (P_{25})$   | `=PERCENTILE(Data, 0.25)`      | **$1.005\text{ Hours}$** |
+| **Demonstrated Target Limit**                 | $USP\ (P_{25})$   | `=PERCENTILE(Data, 0.25)`      | **$1.005\text{ Hours}$** |
 | **Non-Compliant Runs ($> 1.005\text{ hrs}$)** | $NC$              | `COUNTIF(Data, ">1.005")`      | **$68\text{ Days}$**     |
 | **Defects Per Opportunity**                   | $DPO$             | $\frac{NC}{N} = \frac{68}{91}$ | **$0.7473\ (74.73\%)$**  |
 | **Defects Per Million Opportunities**         | $DPMO$            | $DPO \times 1,000,000$         | **$747,252.75$**         |
@@ -122,10 +122,10 @@ The implementation of the new data solution delivered major quantifiable improve
 | **Performance Metric**                 | **Legacy Baseline State (N=91)** | **Automated State (Power BI)**          | **Quantitative Improvement** |
 | -------------------------------------- | -------------------------------- | --------------------------------------- | ---------------------------- |
 | **Data Processing Cycle Time**         | $36 - 48\text{ Hours}$           | $< 2\text{ Minutes}$                    | **> 99.9% Reduction**        |
-| **Process Median Latency ($P_{50}$)**  | $1.140\text{ Hours}$             | $0.030\text{ Hours}\ (1.8\text{ mins})$ | **97.4% Latency Shift**      |
+| **Process Median Latency ($P_{50}$)**  | $1.140\text{ Hours}$             | $0.030\text{ Hours}\ (1.8\text{ mins})$ | **97.46% Latency Shift**      |
 | **Defect Rate ($> 1.005\text{ hrs}$)** | $68\text{ Days}\ (74.73\%)$      | $0\text{ Days}\ (0.00\%)$               | **100% Elimination**         |
 | **Defects Per Million ($DPMO$)**       | $747,252.75$                     | $0.00$                                  | **747k DPMO Eradicated**     |
-| **Process Sigma Level Score ($Z$)**    | **$-0.6659\sigma$**              | **$\ge +6.00\sigma$**                   | **Achieved 6-Sigma Level**   |
+| **Process Sigma Level Score ($Z$)**    | **$-0.6659\sigma$**              | **$\ge 6.00\sigma$ (projected:<br>0 defects in 91-day sample)** | **0 Defects Observed / Projecting<br>World-Class Level**   |
 | **Human Ingestion Defects**            | Frequent (Lookup breaks)         | $0\text{ (Automated System)}$           | **100% Elimination**         |
 | **Data Update Latency**                | $7 - 14\text{ Days}$             | On-Demand Refresh                       | **Real-Time Capability**     |
 ### 5.3 Sustainability Plan & Standard Operating Procedures (SOP)

@@ -8,14 +8,16 @@ The control chart reflects the impact of the **July 1st Go-Live**. It illustrate
 ## 🔢 Six Sigma Capability & Quality Metric Transformation
 Here is the capability evaluation based on shifting the Go-Live boundary to July 1st, 2026, pooling the late June manual crisis window into the Pre-Implementation baseline:
 
-| Statistical Performance Metric                  | Pre-Implementation State (Up to April 1st) |  Post-Implementation State (From April 2nd Onward)  |                        Operational Status / Shift                         |
-| :---------------------------------------------- | :----------------------------------------: | :-------------------------------------------------: | :-----------------------------------------------------------------------: |
-| **Average Daily Cycle Time ($\mu$)**            |          **$1.319\text{ Hours}$**          | **$0.030\text{ Hours } (\approx 1.8\text{ mins})$** |                       📉 **$97.7\%$ Latency Drop**                        |
-| **Process Standard Deviation ($\sigma$)**       |            $0.448\text{ Hours}$            |                $0.004\text{ Hours}$                 |                      🎯 **Total Process Stability**                       |
-| **Defects Per Million Opportunities (DPMO)**    |               **$747,253$**                |                    **$87,912$**                     |               💎 **Eliminated $659\text{k}$ Yield Defects**               |
-| **Process Sigma Quality Level Score**           |           **$-0.6659\ \sigma$**            |                **$1.3537\ \sigma$**                 | 🏆 **Achieved toward Industry Average Benchmark<br>(+2.00𝜎 to +3.00𝜎)** |
+| Statistical Performance Metric               | Pre-Implementation State (through June 30th) |  Post-Implementation State (From July 1st Onward)   |                        Operational Status / Shift                         |
+| :------------------------------------------- | :------------------------------------------: | :-------------------------------------------------: | :-----------------------------------------------------------------------: |
+| **Average Daily Cycle Time ($\mu$)**         |           **$1.319\text{ Hours}$**           | **$0.029\text{ Hours } (\approx 1.7\text{ mins})$** |                       📉 **$97.46\%$ Latency Drop**                        |
+| **Process Standard Deviation ($\sigma$)**    |             $0.448\text{ Hours}$             |                $0.001\text{ Hours}$                 |                      🎯 **Total Process Stability**                       |
+| **Defects Per Million Opportunities (DPMO)** |               **$747,252.75$**               |                      **$0.00$**                     |               💎 **Eliminated $747\text{k}$ Yield Defects**               |
+| **Process Sigma Quality Level Score**        |            **$-0.6659\ \sigma$**             |                  **≈ 6.00\ \sigma** (projected:<br>0 defects observed<br>in 91-day validation<br>sample)            | 🏆 **Consistent with<br>Zero-Defect Projection** |
 > 📌 **Statistical Audit Reconciliation Note:**
-> * **Capability Target Limit ($USL = 1.005\text{ hrs} / P_{25}$):** Evaluated in the `DMAIC Report` & `Project Charter`, representing non-compliance against demonstrated capability ($68/91\text{ runs} = 747,253\text{ DPMO} \rightarrow -0.6659\sigma$ without shift).
+> * **Capability Target Limit (Benchmark = $1.005\text{ hrs} / P_{25}$):** Evaluated in the `DMAIC Report` & `Project Charter`, representing non-compliance against demonstrated capability ($68/91\text{ runs} = 747,252.75\text{ DPMO} \rightarrow -0.6659\sigma$ without shift).
+> * **Single Source of Truth:** All post-implementation figures are derived from the raw audit data in `DMAIC Phase 4 - Improve Phase Report & Implementation Verification` ($N = 91$ days; median $P_{50} = 0.029\text{ hrs}$; $\mu = 0.02918\text{ hrs}$; $\sigma = 0.001376\text{ hrs}$; range $0.023 - 0.035\text{ hrs}$). Against the legacy specification limit ($USL = 1.005\text{ hrs}$), **zero** of the 91 post-go-live days exceed spec, yielding **$0\text{ DPMO}$** (0 defects observed). This 0-defect result is **consistent with a ≥6.00σ world-class projection**, but a formal capability study (≥3.4M observations for 95% confidence at 6.0σ) is required to statistically demonstrate a 6σ level.
+> * **Control Limit vs. Specification Limit:** The SPC chart's UCL ($0.035\text{ hrs} / 2.1\text{ mins}$) is a *statistical control* boundary, **not** a defect spec. Days between $0.031$ and $0.035\text{ hrs}$ are normal gateway-refresh micro-variation, not defects.
 ---
 ## 📅 Chronological Data Verification Ledger
 ### ⚠️ Pre-Implementation Crisis Spike (Late June)

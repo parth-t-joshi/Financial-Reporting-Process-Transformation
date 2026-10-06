@@ -14,7 +14,7 @@ Over a 91-day baseline audit, Daily Reporting Latency exceeded the demonstrated 
 These daily friction points compound into a cumulative batch lead time of **36 to 48 operational hours** per reporting cycle. Statistically, the baseline process operates at **747,252.75 DPMO** with a **Process Sigma Score of -0.6659σ**, severely underperforming industry standard benchmarks (50,000 DPMO / +2.0σ to +3.0σ).
 ### 🎯 Goal Statement
 To execute a leftward distribution shift in Daily Reporting Latency, transitioning the process median from $P_{50} = 1.140\text{ hours}$ to the demonstrated capability limit of $P_{25} = 1.005\text{ hours}$—and ultimately to $<0.03\text{ hours}$ ($<1.8\text{ minutes}$) via an automated Power Query ETL pipeline and Power BI dashboard. 
-The objective is to reduce total batch lead time from **48 hours to < 2 minutes**, eliminate 100% of human-reconciliation errors, reduce DPMO from **747,252.75 to 0**, and elevate the Process Sigma Score from **-0.6659σ to ≥ 6.00σ**.
+The objective is to reduce total batch lead time from **48 hours to < 2 minutes**, eliminate 100% of human-reconciliation errors, reduce DPMO from **747,252.75 to 0**, and project process capability to **$>> +4.50\sigma$** upon sustained compliance.
 ## 3. Project Scope
 | **In-Scope (What is Included)**                                               | **Out-of-Scope (What is Excluded)**                                   |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |
@@ -46,6 +46,9 @@ To track process capability, the project measures success against three vital me
 - **Improve:** Engineer a parameterized ETL framework inside the Power Query engine and design a relational Star-Schema dashboard in Power BI (Completed).
 - **Control:** Deploy a unified global path parameter framework to decouple model execution from local workstation paths; draft standard operating documentation to guarantee sustainability (In-Progress).
 ### 📈 Post-Implementation Performance Update (As of July 2026)
+
+**Single Source of Truth:** All post-implementation figures are derived from the raw audit data in `DMAIC Phase 4 - Improve Phase Report & Implementation Verification` ($N = 91$ days; median $P_{50} = 0.029\text{ hrs}$; $\mu = 0.02918\text{ hrs}$; $\sigma = 0.001376\text{ hrs}$; range $0.023 - 0.035\text{ hrs}$). Against the legacy specification benchmark ($P_{25} = 1.005\text{ hrs}$), **zero** of the 91 post-go-live days exceed spec, yielding **$0\text{ DPMO}$** (0 defects observed). This 0-defect result is **consistent with a $\ge 6.00\sigma$ world-class projection**, but a formal capability study (≥3.4M observations for 95% confidence at 6.0σ) is required to statistically demonstrate a 6σ level.
+
 Following the July 1st Power BI Go-Live, the daily active latency was successfully crushed to 0.03 hours ($\approx 1.8$ minutes). Consequently, the total cumulative batch cycle time dropped from 48 hours down to an on-demand, single-click refresh, permanently eliminating the end-of-period bottleneck. The project is now concluding its final Control Phase documentation.
 ## 7. Project Team Roles & Responsibilities
 - **Six Sigma Green Belt / Data Architect:** _[PARTH JOSHI]_ — Responsible for process scoping, data modeling, Power Query pipeline engineering, and dashboard development.
