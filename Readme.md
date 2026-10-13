@@ -60,11 +60,6 @@ Financial-Reporting-Process-Transformation/
 │   ├── Credit_Cards_Data Inputs.xlsx # Supporting input workbook
 │   ├── Variance Analysis.pbix      # Power BI report and semantic model
 │   └── Variance Analysis.pdf       # Report PDF
-├── copilot/                        # Project workspace and outputs; collapsed
-├── .agents/                        # Local configuration; collapsed
-├── .copilot/                       # Local configuration; collapsed
-├── .obsidian/                      # Vault configuration; collapsed
-├── .git/                           # Git metadata; collapsed
 └── Readme.md                       # Project portfolio documentation
 ```
 

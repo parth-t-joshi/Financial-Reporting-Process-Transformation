@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -76,7 +76,7 @@
       {
         "id": "af35486ae807c8a4",
         "type": "tabs",
-        "dimension": 43.53535353535353,
+        "dimension": 43.535353535353536,
         "children": [
           {
             "id": "efdf346d9961a7c3",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Six Sigma Green Belt reports/Brief Overview of the reporting process.md",
+                "file": "Readme.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -162,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Six Sigma Green Belt reports/Brief Overview of the reporting process.md",
+                "file": "Readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -223,7 +223,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 683.5
+    "width": 320.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -233,15 +233,15 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "copilot:Open Copilot Agent Chat": false
+      "bases:Create new base": false
     }
   },
-  "active": "efdf346d9961a7c3",
+  "active": "e3ddb5c812297fae",
   "lastOpenFiles": [
+    "Six Sigma Green Belt reports/Brief Overview of the reporting process.md",
+    "Readme.md",
     "Six Sigma Green Belt reports/DMAIC Phase 4 - Improve Phase Report & Implementation Verification.md",
     "Six Sigma Green Belt reports/DMAIC Report.md",
-    "Readme.md",
     "Six Sigma Green Belt reports/Project Charter.md",
     "copilot/projects/FP&A Green Belt/outputs/portfolio-release/dmaic-statements-verification.json",
     "copilot/projects/FP&A Green Belt/outputs/portfolio-release/dmaic-before-screenshot-statements.md",
@@ -257,7 +257,6 @@
     "copilot/projects/FP&A Green Belt/outputs/portfolio-release/charter-before-screenshot-problem.md",
     "copilot/projects/FP&A Green Belt/outputs/portfolio-release/restore-charter-problem.py",
     "copilot/copilot-conversations/attachments/copilot-image-bbad929d8155b017c8ab7507c20748d7d3a09ac4c739e6fd9870925b56027480.png",
-    "Six Sigma Green Belt reports/Brief Overview of the reporting process.md",
     "copilot/projects/FP%26A Green Belt/outputs/github/Images/Process Pareto Chart.png.md",
     "copilot/projects/FP&A Green Belt/outputs/Correction Summary.md",
     "Variance Analysis/FP&A Analysis and Reconciliation.md",
